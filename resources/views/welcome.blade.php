@@ -57,7 +57,7 @@
                     <li class="nav-item"><a href="#gallery" class="nav-link"><span>Gallery</span></a></li>
                     <li class="nav-item"><a href="#property" class="nav-link"><span>Property</span></a></li>
                     <li class="nav-item"><a href="#testimonials" class="nav-link"><span>Testimonials</span></a></li>
-                    <li class="nav-item"><a href="#blogs" class="nav-link"><span>Blogs</span></a></li>
+                    <li class="nav-item"><a href="{{route('home')}}" class="nav-link"><span>My Space</span></a></li>
                 </ul>
               </div>
               <div class="btn-area4">
@@ -330,108 +330,35 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="arpart-slider-area owl-carousel">
-            <div class="apartment-boxarea">
-              <div class="img1 image-anime">
-                <img src="assets/img/all-images/apartment/apartment-img6.png" alt="">
-              </div>
-              <div class="content">
-                <a href="javascript:void(0);">Apartment Complex</a>
-                <div class="space16"></div>
-                <p>Rock View Estate, Maitama, Abuja</p>
-                <div class="space24"></div>
-                <ul>
-                  <li><a href="#"><img src="assets/img/icons/bed-icon1.svg" alt=""> x2</a></li>
-                  <li><a href="#"><img src="assets/img/icons/bat-icon1.svg" alt=""> x2</a></li>
-                  <li><a href="#" class="m-0"><img src="assets/img/icons/squre-icon1.svg" alt=""> 1200 sq</a></li>
-                </ul>
-                <div class="space28"></div>
-                <div class="btn-area1">
-                  <div class="single-btn">
-                    <a href="#" class="header-btn11">₦820,000</a>
-                  </div>
-                  <div class="love">
-                    <a href="javascript:void(0)"><img src="assets/img/icons/heart1.svg" alt="" class="heart1"><img src="assets/img/icons/heart2.svg" alt="" class="heart2"></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="apartment-boxarea">
-              <div class="img1 image-anime">
-                <img src="assets/img/all-images/apartment/apartment-img7.png" alt="">
-              </div>
-              <div class="content">
-                <a href="javascript:void(0);">Diamond Apartment</a>
-                <div class="space16"></div>
-                <p>Rock View Estate, Maitama, Abuja</p>
-                <div class="space24"></div>
-                <ul>
-                  <li><a href="#"><img src="assets/img/icons/bed-icon1.svg" alt=""> x2</a></li>
-                  <li><a href="#"><img src="assets/img/icons/bat-icon1.svg" alt=""> x2</a></li>
-                  <li><a href="#" class="m-0"><img src="assets/img/icons/squre-icon1.svg" alt=""> 1200 sq</a></li>
-                </ul>
-                <div class="space28"></div>
-                <div class="btn-area1">
-                  <div class="single-btn">
-                    <a href="#" class="header-btn11">₦820,000</a>
-                  </div>
-                  <div class="love">
-                    <a href="javascript:void(0)"><img src="assets/img/icons/heart1.svg" alt="" class="heart1"><img src="assets/img/icons/heart2.svg" alt="" class="heart2"></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="apartment-boxarea">
-              <div class="img1 image-anime">
-                <img src="assets/img/all-images/apartment/apartment-img8.png" alt="">
-              </div>
-              <div class="content">
-                <a href="javascript:void(0);">Luxury Suite Villa</a>
-                <div class="space16"></div>
-                <p>Rock View Estate, Maitama, Abuja</p>
-                <div class="space24"></div>
-                <ul>
-                  <li><a href="#"><img src="assets/img/icons/bed-icon1.svg" alt=""> x2</a></li>
-                  <li><a href="#"><img src="assets/img/icons/bat-icon1.svg" alt=""> x2</a></li>
-                  <li><a href="#" class="m-0"><img src="assets/img/icons/squre-icon1.svg" alt=""> 1200 sq</a></li>
-                </ul>
-                <div class="space28"></div>
-                <div class="btn-area1">
-                  <div class="single-btn">
-                    <a href="#" class="header-btn11">₦820,000</a>
-                  </div>
-                  <div class="love">
-                    <a href="javascript:void(0)"><img src="assets/img/icons/heart1.svg" alt="" class="heart1"><img src="assets/img/icons/heart2.svg" alt="" class="heart2"></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="apartment-boxarea">
-              <div class="img1 image-anime">
-                <img src="assets/img/all-images/apartment/apartment-img8.png" alt="">
-              </div>
-              <div class="content">
-                <a href="javascript:void(0);">Luxury Suite Villa</a>
-                <div class="space16"></div>
-                <p>Rock View Estate, Maitama, Abuja</p>
-                <div class="space24"></div>
-                <ul>
-                  <li><a href="#"><img src="assets/img/icons/bed-icon1.svg" alt=""> x2</a></li>
-                  <li><a href="#"><img src="assets/img/icons/bat-icon1.svg" alt=""> x2</a></li>
-                  <li><a href="#" class="m-0"><img src="assets/img/icons/squre-icon1.svg" alt=""> 1200 sq</a></li>
-                </ul>
-                <div class="space28"></div>
-                <div class="btn-area1">
-                  <div class="single-btn">
-                    <a href="#" class="header-btn11">₦820,000</a>
-                  </div>
-                  <div class="love">
-                    <a href="javascript:void(0)"><img src="assets/img/icons/heart1.svg" alt="" class="heart1"><img src="assets/img/icons/heart2.svg" alt="" class="heart2"></a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            @if(count($properties)>0)
+                @foreach($properties as $property)
+                    <div class="apartment-boxarea">
+                    <div class="img1 image-anime">
+                        <img src="{{ asset('storage/' . $property->image_path) }}" alt="">
+                    </div>
+                    <div class="content">
+                        <a href="javascript:void(0);">{{$property->name}}</a>
+                        <div class="space16"></div>
+                        <p style="font-size: 13px">{{$property->address}}, {{$property->city}}</p>
+                        <div class="space24"></div>
+                        <ul>
+                            @foreach($property->amenities as $amenity)
+                                <li><a href="#" style="font-size: 14px; margin-bottom: 5px;">{{$amenity->name}}</a></li>
+                            @endforeach
+                        </ul>
+                        <div class="space28"></div>
+                        <div class="btn-area1">
+                            <div class="single-btn">
+                                <a href="#" >₦ {{$property->price_per_night}}</a>
+                            </div>
+                            <div class="single-btn">
+                                <a class="header-btn11" href="{{route('booking.book', $property->id)}}" style="font-size: 14px">Book</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                @endforeach
+            @endif
           </div>
         </div>
       </div>

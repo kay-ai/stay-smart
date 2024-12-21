@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,12 +18,14 @@ class PropertyFactory extends Factory
     public function definition()
     {
         return [
-            'property_name' => fake()->company() . ' Apartment',
+            'user_id' => User::factory(),
+            'name' => fake()->company() . ' Apartment',
             'description' => fake()->paragraph(),
             'address' => fake()->address(),
             'city' => fake()->city(),
             'country' => fake()->country(),
             'price_per_night' => fake()->randomFloat(2, 50, 500),
+            'image_path' => 'apartments/apartment-img' . fake()->unique()->numberBetween(1, 10) . '.png',
             'status' => ['Pending', 'Available', 'Booked', 'Under Maintenance'][rand(0, 3)],
         ];
     }

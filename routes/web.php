@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\BookingsController;
+use App\Http\Controllers\PagesController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +16,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(PagesController::class)->group(function(){
+    Route::get('/', 'welcome')->name('welcome');
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::middleware(['auth'])->group(function () {
+    Route::controller(BookingsController::class)->group(function () {
+        Route::get('/my_bookings','mine')->name('booking.mine');
+        Route::get('/book/property/{property}','book')->name('booking.book');
+        Route::post('/booking/store','store')->name('booking.store');
+        Route::get('/booking/view/{reference}','view')->name('booking.view');
+    });
+});

@@ -27,9 +27,13 @@ class HomeController extends Controller
     public function index()
     {
         $bookings = Booking::latest()->get();
-        $my_bookings = Booking::where('id', auth()->id())->count();
+        $my_bookings = Booking::where('user_id', auth()->id())->latest()->get();
         $properties = Property::latest()->get();
+        $trending_properties = Property::withCount('bookings')
+                        ->orderBy('bookings_count', 'desc')
+                        ->take(20)
+                        ->get();
         $users = User::count();
-        return view('dashboard', compact('bookings', 'my_bookings', 'properties', 'users'));
+        return view('dashboard', compact('bookings', 'my_bookings', 'properties', 'users', 'trending_properties'));
     }
 }

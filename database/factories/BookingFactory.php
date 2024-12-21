@@ -26,6 +26,7 @@ class BookingFactory extends Factory
             'property_id' => Property::factory(),
             'user_id' => User::factory(),
             'status' => ['Confirmed', 'Pending', 'Cancelled'][rand(0, 2)],
+            'reference' => strtoupper(fake()->unique()->bothify('???-#####')),
             'check_in_date' => $startDate,
             'check_out_date' => $endDate,
             'total_price' => fake()->randomFloat(2, 50, 500),

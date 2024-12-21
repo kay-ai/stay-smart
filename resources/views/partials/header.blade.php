@@ -33,7 +33,6 @@
                                         width="54" height="54">
                                     <div class="ms-3">
                                         <h6 class="mb-0 dropdown-user-name">{{auth()->user()->first_name . ' ' .auth()->user()->last_name}}</h6>
-                                        <small class="mb-0 dropdown-user-designation text-secondary text-wrap">{{auth()->user()->department}}</small>
                                     </div>
                                 </div>
                             </a>
@@ -53,12 +52,15 @@
                             <hr class="dropdown-divider">
                         </li>
                         <li>
-                            <a class="dropdown-item" href="{{ route('logout') }} ">
+                            <a class="dropdown-item" href="javascript:void(0)" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <div class="d-flex align-items-center">
                                     <div class=""><i class="bi bi-lock-fill"></i></div>
                                     <div class="ms-3"><span>Logout</span></div>
                                 </div>
                             </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
                         </li>
                     </ul>
                 </li>

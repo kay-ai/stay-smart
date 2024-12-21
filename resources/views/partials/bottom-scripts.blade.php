@@ -15,11 +15,16 @@
 <!--app-->
 <script src="{{asset('dashboard/assets/plugins/datatable/js/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('dashboard/assets/plugins/datatable/js/dataTables.bootstrap5.min.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="{{asset('dashboard/assets/js/app.js')}}"></script>
 <script src="{{asset('dashboard/assets/js/index.js')}}"></script>
 <script src="{{asset('dashboard/assets/js/script.js')}}"></script>
+
 @stack('js')
 <script>
-new PerfectScrollbar(".review-list")
-new PerfectScrollbar(".chat-talk")
+    $(document).ready(function() {
+        $('.mDatatable').DataTable();
+    });
+    new PerfectScrollbar(".review-list")
+    new PerfectScrollbar(".chat-talk")
 </script>
