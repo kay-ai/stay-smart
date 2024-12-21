@@ -24,14 +24,14 @@
             </a>
         </li>
         <li class="{{$activePage == '' ? 'mm-active' : ''}}">
-            <a href="#">
+            <a href="{{route('service.index')}}">
                 <div class="parent-icon"><i class="bi bi-wrench-adjustable-circle-fill"></i>
                 </div>
                 <div class="menu-title">Services</div>
             </a>
         </li>
         <li class="{{$activePage == '' ? 'mm-active' : ''}}">
-            <a href="#">
+            <a href="{{route('payment.index')}}">
                 <div class="parent-icon"><i class="bi bi-wallet2"></i>
                 </div>
                 <div class="menu-title">Payments</div>
@@ -45,6 +45,7 @@
             </a>
         </li>
         </li>
+        @if(auth()->user()->role != 'User')
         <li class="{{$activePage == '' ? 'mm-active' : ''}}" class="menu-label">Property Management</li>
         <li class="{{$activePage == '' ? 'mm-active' : ''}}">
             <a class="has-arrow" href="javascript:;">
@@ -83,7 +84,9 @@
                 </li>
             </ul>
         </li>
+        @endif
         <li class="menu-label">Settings</li>
+        @if(auth()->user()->role != 'User')
         <li>
             <a class="has-arrow" href="javascript:;">
 
@@ -114,6 +117,7 @@
                 <div class="menu-title">Tickets</div>
             </a>
         </li>
+        @endif
         <li>
             <a href="#">
                 <div class="parent-icon"><i class="bi bi-person-lines-fill"></i>

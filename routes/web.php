@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookingsController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PaymentsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,5 +31,13 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/book/property/{property}','book')->name('booking.book');
         Route::post('/booking/store','store')->name('booking.store');
         Route::get('/booking/view/{reference}','view')->name('booking.view');
+    });
+
+    Route::controller(PagesController::class)->group(function () {
+        Route::get('/services', 'services')->name('service.index');
+    });
+
+    Route::controller(PaymentsController::class)->group(function () {
+        Route::get('/payments', 'index')->name('payment.index');
     });
 });

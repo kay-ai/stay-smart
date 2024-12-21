@@ -37,7 +37,7 @@ class PropertiesAndBookingsSeeder extends Seeder
                 Booking::create([
                     'property_id' => $property->id,
                     'user_id' => $randomUser->id,
-                    'status' => ['Confirmed', 'Pending', 'Cancelled'][rand(0, 2)],
+                    'status' => ['Confirmed'][rand(0, 2)],
                     'check_in_date' => $startDate,
                     'check_out_date' => $endDate,
                     'reference' => strtoupper(fake()->unique()->bothify('???-#####')),

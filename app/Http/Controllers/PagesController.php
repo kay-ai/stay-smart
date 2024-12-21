@@ -15,4 +15,8 @@ class PagesController extends Controller
 
         return view('welcome', compact('properties'));
     }
+
+    public function services(){
+        return view('services.index');
+    }
 }

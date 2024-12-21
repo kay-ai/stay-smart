@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             // UsersSeeder::class,
             // PropertiesAndBookingsSeeder::class,
-            PropertyAmenitySeeder::class,
+            // PropertyAmenitySeeder::class,
+            PaymentsSeeder::class
         ]);
     }
 }

@@ -3,6 +3,7 @@
 @section('content')
     <!--start content-->
     <main class="page-content">
+        @if(auth()->user()->role != 'User')
         <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-4">
             <div class="col">
                 <div class="card rounded-4">
@@ -71,6 +72,7 @@
             </div>
 
         </div>
+        @endif
         <!--end row-->
 
         <div class="row">
@@ -161,7 +163,7 @@
                 </div>
             </div>
         </div>
-
+        @if(auth()->user()->role != 'User')
         <div class="row px-3 mt-3">
             <h6 class="mb-2 text-uppercase">Manage all Bookings</h6>
             <hr/>
@@ -218,7 +220,7 @@
                 </div>
             </div>
         </div>
-
+        @endif
     </main>
     <!--end page main-->
 @endsection
