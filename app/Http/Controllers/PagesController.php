@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function welcome(){
-        $properties = Property::withCount('bookings')
+        $properties = Property::where('status', 'Available')->withCount('bookings')
                     ->orderBy('bookings_count', 'desc')
                     ->take(20)
                     ->get();

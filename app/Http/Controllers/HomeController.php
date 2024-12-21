@@ -29,10 +29,11 @@ class HomeController extends Controller
         $bookings = Booking::latest()->get();
         $my_bookings = Booking::where('user_id', auth()->id())->latest()->get();
         $properties = Property::latest()->get();
-        $trending_properties = Property::withCount('bookings')
+        $trending_properties = Property::where('status', 'Available')->withCount('bookings')
                         ->orderBy('bookings_count', 'desc')
                         ->take(20)
                         ->get();
+
         $users = User::count();
         return view('dashboard', compact('bookings', 'my_bookings', 'properties', 'users', 'trending_properties'));
     }
