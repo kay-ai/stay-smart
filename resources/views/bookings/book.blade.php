@@ -3,9 +3,9 @@
 @section('content')
 <!--start content-->
 <main class="page-content">
-    <div class="container">
+    <div class="container p-0">
         <div class="row">
-            <div class="col-md-12 p-4">
+            <div class="col-md-12 p-md-4">
                 <div class="property-banner">
                     <img class="property-banner-image" src="{{ asset('storage/' . $property->image_path) }}">
                     <div class="property-banner-content">
@@ -19,16 +19,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="amenities gap-2 px-5">
+                <div class="amenities gap-2 px-md-5" style="flex-wrap: wrap">
                     <span class="item">{{$property->max_guests}} Max Guests</span>
                     @foreach($property->amenities as $amenity)
                         <span class="item">{{$amenity->name}}</span>
                     @endforeach
                 </div>
-                <div class="desc px-5 mt-3">
+                <div class="desc px-md-5 mt-3">
                     <p class="text-center">{{$property->description}}</p>
                 </div>
-                <form class="px-5 pt-3" action="{{route('booking.store')}}" method="POST">
+                <form class="px-md-5 pt-3" action="{{route('booking.store')}}" method="POST">
                     @csrf
                     <div class="row">
                         <div class="col-md-4">
@@ -80,7 +80,7 @@
                             @enderror
                         </div>
                         <input type="hidden" name="property_id" value="{{$property->id}}">
-                        <div class="col-12 mt-4 d-flex justify-content-center">
+                        <div class="col-12 my-4 d-flex justify-content-center">
                             <button type="submit" class="btn btn-primary rounded-4 px-4">Book Now</button>
                         </div>
                     </div>
