@@ -3,9 +3,9 @@
 @section('content')
 <!--start content-->
 <main class="page-content">
-    <div class="container">
+    <div class="container p-0">
         <div class="row">
-            <div class="col-md-12 p-4">
+            <div class="col-md-12 p-md-4">
                 <div class="property-banner">
                     <img class="property-banner-image" src="{{ asset('storage/' . $booking->property->image_path) }}">
                     <div class="property-banner-content">
@@ -19,7 +19,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="amenities gap-2 px-5">
+                <div class="amenities gap-2 px-md-5" style="flex-wrap: wrap">
                     <span class="item">{{$booking->property->max_guests}} Max Guests</span>
                     @foreach($booking->property->amenities as $amenity)
                         <span class="item">{{$amenity->name}}</span>
