@@ -226,6 +226,136 @@
 <!--===== HERO AREA ENDS =======-->
 <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary rounded-2" tabindex="0">
 
+<div class="property10-section-area sp6" id="property">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-12">
+                <div class="property-header heading10">
+                    <h5 data-aos="fade-left" data-aos-duration="800">Our Business Model</h5>
+                </div>
+                <div class="space40"></div>
+            </div>
+            <div class="col-lg-4">
+                <div class="p-3 shadow-sm" style="border-radius: 15px;">
+                    <div class="property-images">
+                        <div class="img1 reveal image-anime">
+                            <img src="assets/img/all-images/about/about-img1.png" alt="" style="height: 250px">
+                        </div>
+                    </div>
+                    <div class="space20"></div>
+                    <div class="d-flex justify-content-between heading7">
+                        <h2 class="" data-aos="fade-left" data-aos-duration="800" style="font-size: 25px"> Book Apartments</h2>
+                        <div class="btn-area1" data-aos="fade-up" data-aos-duration="1200">
+                            <a href="{{route('home')}}" target="_blank" class="header-btn11" style="padding: 10px 10px; margin-top: 10px;">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="space20"></div>
+                    <div class="heading10">
+                        <p class="service-desc " data-aos="fade-left" data-aos-duration="1000">
+                            Explore a wide range of beautiful apartments, compare options, and book your ideal home effortlessly in just a few clicks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="p-3 shadow-sm" style="border-radius: 15px;">
+                    <div class="property-images">
+                        <div class="img1 reveal image-anime">
+                            <img src="assets/img/all-images/about/about-img2.png" alt="" style="height: 250px">
+                        </div>
+                    </div>
+                    <div class="space20"></div>
+                    <div class="d-flex justify-content-between heading7">
+                        <h2 class="" data-aos="fade-left" data-aos-duration="1000" style="font-size: 25px">List Your Apartments</h2>
+                        <div class="btn-area1" data-aos="fade-up" data-aos-duration="1400">
+                            <a href="{{route('home')}}" target="_blank" class="header-btn11" style="padding: 10px 10px; margin-top: 10px;">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="space20"></div>
+                    <div class="heading10">
+                        <p class="service-desc " data-aos="fade-left" data-aos-duration="1200">
+                            Easily showcase your property to a broad audience of potential renters, manage inquiries, and maximize your rental income.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="p-3 shadow-sm" style="border-radius: 15px;">
+                    <div class="property-images">
+                        <div class="img1 reveal image-anime">
+                            <img src="assets/img/all-images/about/vehicles.jpeg" alt="" style="height: 250px">
+                        </div>
+                    </div>
+                    <div class="space20"></div>
+                    <div class="d-flex justify-content-between heading7">
+                        <h2 class="" data-aos="fade-left" data-aos-duration="1200" style="font-size: 25px">Book a Ride</h2>
+                        <div class="btn-area1" data-aos="fade-up" data-aos-duration="1400">
+                            <a href="{{route('home')}}" target="_blank" class="header-btn11" style="padding: 10px 10px; margin-top: 10px;">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="space20"></div>
+                    <div class="heading10">
+                        <p class="service-desc " data-aos="fade-left" data-aos-duration="1800">
+                            Plan your apartment tours hassle-free by booking a reliable ride directly through our platform for a seamless experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="property10-section-area sp6" id="property" style="background: #fff7ee;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <div class="space20"></div>
+                <div class="property-header heading10">
+                    <h5 data-aos="fade-left" data-aos-duration="1000">Did you Know?</h5>
+                    <div class="space20"></div>
+                    <p  data-aos="fade-left" data-aos-duration="1800">
+                        We are not a usual hotel or apartment provider, here's why…
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="p-3 shadow-sm" style="border-radius: 15px;">
+                    <div class="heading7 text-center">
+                        <h2 class="" data-aos="fade-left" data-aos-duration="1200" style="font-size: 25px">Digital Check-in</h2>
+                    </div>
+                    <div class="space20"></div>
+                    <div class="heading10">
+                        <p class="service-desc text-center" data-aos="fade-left" data-aos-duration="1600">
+                            <b>No physical reception</b> on site means <b>less waiting time</b>  for you, but a mandatory <b>online check-in</b> before your arrival.
+                        </p>
+                        <div class="space20"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="p-3 shadow-sm" style="border-radius: 15px;">
+                    <div class="heading7 text-center">
+                        <h2 class="" data-aos="fade-left" data-aos-duration="1400" style="font-size: 25px">Bed Layout</h2>
+                    </div>
+                    <div class="space20"></div>
+                    <div class="heading10">
+                        <p class="service-desc text-center" data-aos="fade-left" data-aos-duration="1800">
+                            Our suites are usually equipped with <b>double beds</b>  - suites for more than 2 adults tend to have an <b>additional sofa bed</b>.
+                        </p>
+                        <div class="space20"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--===== SERVICE AREA STARTS =======-->
 <div class="service10-section-area sp6" id="amenities">
     <div class="side-img">
@@ -239,7 +369,7 @@
         <div class="col-lg-12">
           <div class="service-heading space-margin60">
             <div class="heading10">
-              <h5 data-aos="fade-left" data-aos-duration="800">Villa amenities</h5>
+              <h5 data-aos="fade-left" data-aos-duration="800">Featured Apartment</h5>
               <div class="space20"></div>
               <h2 class="text-anime-style-3">Discover Our D.Villa's <br class="d-lg-block d-none"> Exceptional Amenities</h2>
             </div>
@@ -503,7 +633,7 @@
         </div>
       </div>
     </div>
-  </div>
+</div>
   <!--===== PROPERTIES AREA ENDS =======-->
 
 <!--===== TESTIMONIAL AREA STARTS =======-->
