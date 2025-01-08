@@ -127,7 +127,7 @@
       </ul>
 
       <div class="allmobilesection">
-        <a href="contact.html"  class="header-btn11">Get Started <span><i class="fa-solid fa-arrow-right"></i></span></a>
+        <a href="{{route('home')}}"  class="header-btn11">Get Started <span><i class="fa-solid fa-arrow-right"></i></span></a>
         <div class="single-footer">
           <h3>Contact Info</h3>
           <div class="footer1-contact-info">
