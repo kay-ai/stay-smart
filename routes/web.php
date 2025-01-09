@@ -3,6 +3,7 @@
 use App\Http\Controllers\BookingsController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PaymentsController;
+use App\Http\Controllers\PropertyController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,10 @@ Route::middleware(['auth'])->group(function () {
 
     Route::controller(PagesController::class)->group(function () {
         Route::get('/services', 'services')->name('service.index');
+    });
+    
+    Route::controller(PropertyController::class)->group(function () {
+        Route::get('/apartments', 'index')->name('apartments.index');
     });
 
     Route::controller(PaymentsController::class)->group(function () {

@@ -23,11 +23,11 @@
                 <div class="menu-title">My Bookings</div>
             </a>
         </li>
-        <li class="{{$activePage == '' ? 'mm-active' : ''}}">
-            <a href="{{route('service.index')}}">
+        <li class="{{$activePage == 'Apartments' ? 'mm-active' : ''}}">
+            <a href="{{route('apartments.index')}}">
                 <div class="parent-icon"><i class="bi bi-wrench-adjustable-circle-fill"></i>
                 </div>
-                <div class="menu-title">Services</div>
+                <div class="menu-title">Apartments</div>
             </a>
         </li>
         <li class="{{$activePage == '' ? 'mm-active' : ''}}">

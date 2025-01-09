@@ -1,4 +1,4 @@
-@extends('layouts.app', [$activePage = 'Payments'])
+@extends('layouts.app', [$activePage = 'Services'])
 
 @section('content')
 <!--start content-->

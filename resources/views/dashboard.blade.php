@@ -91,43 +91,45 @@
         @endif
         <!--end row-->
 
-        <div class="row mb-3 py-3">
-            <h6 class="mb-2 text-uppercase">Trending</h6>
-            {{-- <hr/> --}}
-            <div class="property-carousel owl-carousel owl-theme p-0">
-                @foreach ($trending_properties as $property)
-                    <div class="item">
-                        <div class="card">
-                            <div class="property-badge">
-                                <span class="booked {{$property->status == 'Booked' ? 'bg-danger' : ($property->status == 'Available' ? 'bg-success' : '')}}">{{$property->status}}</span>
-                                <span class="price bg-success">₦ {{$property->price_per_night}}</span>
-                            </div>
-                            <img src="{{ asset('storage/' . $property->image_path) }}" alt="{{ $property->name }}" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $property->name }}</h5>
-                                <p class="card-text">{{ $property->location }}</p>
-                                <p class="card-text buttons gap-2">
-                                    <a href="/book/property/{{$property->id}}" class="icons plus">
-                                        <i class="bi bi-plus-lg"></i>
-                                    </a>
-                                    <a href="#" class="icons bookmark">
-                                        <i class="bi bi-bookmark"></i>
-                                    </a>
-                                    <a href="#" class="icons eye">
-                                        <i class="bi bi-eye"></i>
-                                    </a>
-                                </p>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-
-        </div>
-        <!--end row-->
+        
 
         <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-12">
+                <div class="card rounded-4 p-3" style="width: 100%;">
+                    <div class="card-body text-center">
+                        <div class="row justify-content-center">
+                            <img src="{{asset('dashboard/assets/images/house.png')}}" alt="" style="text-align:center; width: 90%">
+                        </div>
+                        <p class="mt-4">Smart Apartments tailored for you.</p>
+                        <a href="{{route('apartments.index')}}" role="button" class="btn btn-primary rounded-4 px-4">Book an Apartment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card rounded-4 p-3" style="width: 100%;">
+                    <div class="card-body text-center">
+                        <div class="row justify-content-center">
+                            <img src="{{asset('dashboard/assets/images/chef.jpg')}}" alt="" style="text-align:center; width: 80%">
+                        </div>
+                        <p>Professional Chefs are waiting</p>
+                        <button type="button" class="btn btn-primary rounded-4 px-4">Book a Chef</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card rounded-4 p-3" style="width: 100%;">
+                    <div class="card-body text-center">
+                        <div class="row justify-content-center">
+                            <img src="{{asset('dashboard/assets/images/driver.avif')}}" alt="" style="text-align:center; width: 94%">
+                        </div>
+                        <p class="mt-1">Our Drivers Available all day.</p>
+                        <button type="button" class="btn btn-primary rounded-4 px-4">Book a Driver</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-4">
             <h6 class="mb-2 text-uppercase">My Bookings</h6>
             <hr/>
             <div class="row p-0">
@@ -233,30 +235,3 @@
     </main>
     <!--end page main-->
 @endsection
-
-@push('js')
-    <script>
-        $(document).ready(function() {
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: true,
-                dots: true,
-                autoplay:true,
-                autoplayTimeout:3000,
-                autoplayHoverPause:true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 2
-                    },
-                    1000: {
-                        items: 4
-                    }
-                }
-            });
-        });
-    </script>
-@endpush
