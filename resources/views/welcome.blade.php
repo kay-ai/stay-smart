@@ -191,28 +191,34 @@
                 <div class="space70"></div>
                 <div class="hero10-header">
                     {{-- <h5 data-aos="fade-left" data-aos-duration="800"><i class="fa-solid fa-location-dot"></i> 538 Amino Kano Crescent, Wuse 2, Abuja.</h5> --}}
-                    <h2 class="text-anime-style-2">Welcome to Your Luxurious Haven</h2>
+                    <h2 class="text-anime-style-2">Book your smart stay with us.</h2>
                     <div class="space32"></div>
                     <div class="btn-area1" data-aos="fade-left" data-aos-duration="1000">
                         <a href="javascript:void(0);" class="header-btn11">See Apartments <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12 mt-4">
+            <div class="col-lg-12 hero-nav-tabs-div mt-4" data-aos="zoom-in-up" data-aos-duration="1000">
                 <div class="space70"></div>
-                <div class="header-contact-box" data-aos="zoom-in-up" data-aos-duration="1000">
-                    <div class="row">
+                <ul class="nav nav-tabs hero-nav-tabs gap-2" id="heroTabs" role="tablist" style="width: max-content">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="book-tab" data-toggle="tab" href="#book" role="tab" aria-controls="book" aria-selected="true">Book with us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="checkIn-tab" data-toggle="tab" href="#checkIn" role="tab" aria-controls="checkIn" aria-selected="false">Check-in</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="bookings-tab" data-toggle="tab" href="#bookings" role="tab" aria-controls="bookings" aria-selected="false">Your Booking</a>
+                    </li>
+                </ul>
+                <div class="header-contact-box tab-content" id="heroTabsContent" style="border-top-left-radius: 0;">
+                    <div class="row tab-pane fade show active" id="book" role="tabpanel" aria-labelledby="book-tab">
                         <div class="col-md-10">
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="input-area">
                                         <label class="d-lg-none" for="location">Location</label>
                                         <input type="text" name="location" placeholder="Location">
-                                        {{-- <select name="location" id="" placeholder="Location">
-                                            <option value="">-- Select Location --</option>
-                                            <option value="abuja">Abuja</option>
-                                            <option value="lagos">lagos</option>
-                                        </select> --}}
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -239,6 +245,62 @@
                             <div class="input-area text-end">
                                 <div class="space30 d-lg-none"></div>
                                 <button type="submit" class="header-btn11 search">Search <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row tab-pane fade" id="checkIn" role="tabpanel" aria-labelledby="checkIn-tab">
+                        <div class="col-md-12">
+                            <h3>Online check-in</h3>
+                            <div class="space20"></div>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-area">
+                                        <label class="d-lg-none mt-3" for="last_name">Last Name</label>
+                                        <input type="text" name="last_name" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-area">
+                                        <label class="d-lg-none mt-3" for="booking_reference">Booking Reference</label>
+                                        <input type="number" name="booking_reference" placeholder="Booking Reference">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 align-items-center d-flex justify-content-end">
+                            <div class="input-area text-end">
+                                <div class="space30 d-lg-none"></div>
+                                <button type="submit" class="header-btn11 search">Submit <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row tab-pane fade" id="bookings" role="tabpanel" aria-labelledby="bookings-tab">
+                        <div class="col-md-12">
+                            <h3>Access your booking information</h3>
+                            <div class="space20"></div>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-area">
+                                        <label class="d-lg-none mt-3" for="last_name">Last Name</label>
+                                        <input type="text" name="last_name" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-area">
+                                        <label class="d-lg-none mt-3" for="booking_reference">Booking Reference</label>
+                                        <input type="number" name="booking_reference" placeholder="Booking Reference">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 align-items-center d-flex justify-content-end">
+                            <div class="input-area text-end">
+                                <div class="space30 d-lg-none"></div>
+                                <button type="submit" class="header-btn11 search">Submit <i class="fa-solid fa-arrow-right"></i></button>
                             </div>
                         </div>
                     </div>
@@ -381,7 +443,7 @@
 </div>
 
 <!--===== SERVICE AREA STARTS =======-->
-<div class="service10-section-area sp6" id="amenities">
+{{-- <div class="service10-section-area sp6" id="amenities">
     <div class="side-img">
       <img src="assets/img/all-images/apartment/apartment-img9.png" alt="" data-aos="fade-right" data-aos-duration="1000">
     </div>
@@ -466,8 +528,62 @@
         </div>
       </div>
     </div>
-</div>
+</div> --}}
 <!--===== SERVICE AREA ENDS =======-->
+
+<div class="property10-section-area sp6" id="property">
+    <div class="container">
+        <div class="col-md-7">
+            <div class="property-header heading10">
+                <h5 data-aos="fade-left" data-aos-duration="800">Our Locations</h5>
+                <div class="space20"></div>
+                <p class="ms-2" data-aos="fade-left" data-aos-duration="800">Discover our wide variety of locations across Europe. All our Smart Homes are situated in prime locations, conveniently connected to public transport & our suites are suitable for short city trips as well as longer business stays. Stay tuned!</p>
+            </div>
+            <div class="space40"></div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-4">
+                <div class="p-3" style="border-radius: 15px;">
+                    <div class="property-images">
+                        <div class="img1 reveal image-anime">
+                            <img src="assets/img/all-images/about/abuja.jpg" alt="" style="height: 250px">
+                        </div>
+                    </div>
+                    <div class="space20"></div>
+                    <div class="d-flex justify-content-between heading7">
+                        <h2 class="" data-aos="fade-left" data-aos-duration="800" style="font-size: 25px"> Abuja</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="p-3" style="border-radius: 15px;">
+                    <div class="property-images">
+                        <div class="img1 reveal image-anime">
+                            <img src="assets/img/all-images/about/lagos.jpg" alt="" style="height: 250px">
+                        </div>
+                    </div>
+                    <div class="space20"></div>
+                    <div class="d-flex justify-content-between heading7">
+                        <h2 class="" data-aos="fade-left" data-aos-duration="800" style="font-size: 25px"> Lagos</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="p-3" style="border-radius: 15px;">
+                    <div class="property-images">
+                        <div class="img1 reveal image-anime">
+                            <img src="assets/img/all-images/about/port.webp" alt="" style="height: 250px">
+                        </div>
+                    </div>
+                    <div class="space20"></div>
+                    <div class="d-flex justify-content-between heading7">
+                        <h2 class="" data-aos="fade-left" data-aos-duration="800" style="font-size: 25px"> Port-Harcourt</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--===== APARTMENT AREA STARTS =======-->
 <div class="apartment10-area sp6" id="apartment">
@@ -1018,6 +1134,13 @@
 <script src="assets/js/plugins/ScrollTrigger.min.js"></script>
 <script src="assets/js/plugins/Splitetext.js"></script>
 <script src="assets/js/main.js"></script>
+
+<script>
+    $('#heroTabs a').on('click', function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+</script>
 
 </body>
 </html>

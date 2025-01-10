@@ -24158,3 +24158,20 @@ Location:
 }
 
 /*============= GALLERY CSS AREA ===============*//*# sourceMappingURL=main.css.map */
+
+/* New Styles */
+
+.hero-nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    background-color: var(--ztc-text-text-1) !important;
+    color: var(--ztc-bg-bg-22) !important;
+    font-family: var(--ztc-family-font2) !important
+}
+
+.hero-nav-tabs .nav-link{
+    background: #f8e5d4 !important;
+    color: rgb(135 82 51) !important;
+}
+
+.hero-nav-tabs-div .tab-content>.active {
+    display: flex !important;
+}
