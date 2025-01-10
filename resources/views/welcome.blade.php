@@ -188,35 +188,59 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5">
+                <div class="space70"></div>
                 <div class="hero10-header">
-                    <h5 data-aos="fade-left" data-aos-duration="800"><i class="fa-solid fa-location-dot"></i> 538 Amino Kano Crescent, Wuse 2, Abuja.</h5>
-                    <div class="space20"></div>
+                    {{-- <h5 data-aos="fade-left" data-aos-duration="800"><i class="fa-solid fa-location-dot"></i> 538 Amino Kano Crescent, Wuse 2, Abuja.</h5> --}}
                     <h2 class="text-anime-style-2">Welcome to Your Luxurious Haven</h2>
                     <div class="space32"></div>
                     <div class="btn-area1" data-aos="fade-left" data-aos-duration="1000">
-                        <a href="javascript:void(0);" class="header-btn11">Schedule A Visit Now <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="javascript:void(0);" class="header-btn11">See Apartments <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2"></div>
-            <div class="col-lg-5">
+            <div class="col-lg-12 mt-4">
+                <div class="space70"></div>
                 <div class="header-contact-box" data-aos="zoom-in-up" data-aos-duration="1000">
-                    <h3>Make An Enquiry</h3>
-                    <div class="space32"></div>
-                    <div class="input-area">
-                        <input type="text" placeholder="Full Name*">
-                    </div>
-                    <div class="space24"></div>
-                    <div class="input-area">
-                        <input type="number" placeholder="Phone Number*">
-                    </div>
-                    <div class="space24"></div>
-                    <div class="input-area">
-                        <textarea placeholder="Your Message*"></textarea>
-                    </div>
-                    <div class="space32"></div>
-                    <div class="input-area text-end">
-                        <button type="submit" class="header-btn11">Submit Now <i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="input-area">
+                                        <label class="d-lg-none" for="location">Location</label>
+                                        <input type="text" name="location" placeholder="Location">
+                                        {{-- <select name="location" id="" placeholder="Location">
+                                            <option value="">-- Select Location --</option>
+                                            <option value="abuja">Abuja</option>
+                                            <option value="lagos">lagos</option>
+                                        </select> --}}
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="input-area">
+                                        <label class="d-lg-none mt-3" for="check-in">Check-in</label>
+                                        <input type="date" name="check-in" placeholder="Check-in">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="input-area">
+                                        <label class="d-lg-none mt-3" for="check-out">Check-out</label>
+                                        <input type="date" name="check-out" placeholder="Check-out">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="input-area">
+                                        <label class="d-lg-none mt-3" for="check-out">Guests</label>
+                                        <input type="number" name="guests" placeholder="Guests">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 align-items-center d-flex justify-content-end">
+                            <div class="input-area text-end">
+                                <div class="space30 d-lg-none"></div>
+                                <button type="submit" class="header-btn11 search">Search <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

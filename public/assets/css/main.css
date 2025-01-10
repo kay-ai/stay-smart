@@ -1073,6 +1073,16 @@ Location:
   top: 0;
   z-index: -1;
 }
+
+.header-btn11.search{
+    padding: 23px 57px !important;
+    border-radius: 10px !important;
+}
+
+.header-btn11.search::after{
+    border-radius: 10px !important;
+}
+
 .header-btn11 i {
   margin-left: 4px;
   transform: rotate(-45deg);
@@ -6074,6 +6084,22 @@ Location:
   font-weight: var(--ztc-weight-bold);
   line-height: 24px;
 }
+.input-area label{
+    font-weight: 500;
+}
+.header2-slick-slider .hero6-main-area .header-contact-box .input-area select {
+  width: 100%;
+  background: #F3F3F3;
+  padding: 24px 20px;
+  height: 64px;
+  border-radius: 8px;
+  color: var(--ztc-text-text-19);
+  font-family: var(--ztc-family-font2);
+  font-size: var(--ztc-font-size-font-s16);
+  font-style: normal;
+  font-weight: var(--ztc-weight-medium);
+  line-height: 16px;
+}
 .header2-slick-slider .hero6-main-area .header-contact-box .input-area input {
   width: 100%;
   background: #F3F3F3;
@@ -6540,7 +6566,7 @@ Location:
 .hero10-section-area {
   position: relative;
   z-index: 1;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg/brown-house.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0 0 0 / 50%), rgb(255 255 255 / 100%)), url(../img/bg/brown-house.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6596,10 +6622,10 @@ Location:
   }
 }
 .hero10-section-area .header-contact-box {
-  border-radius: 8px;
+  border-radius: 20px;
   background: #FFF;
   box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.09);
-  padding: 32px;
+  padding: 15px;
 }
 .hero10-section-area .header-contact-box h3 {
   color: var(--ztc-text-text-25);
