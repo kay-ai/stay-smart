@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\BookingsController;
+use App\Http\Controllers\ChefController;
+use App\Http\Controllers\ChefServiceController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PaymentsController;
 use App\Http\Controllers\PermissionAssignmentController;
@@ -48,8 +50,25 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/apartments/check-in', 'checkIn')->name('apartments.checkIn');
         Route::get('/apartments/create', 'create')->name('apartments.create');
         Route::post('/apartments', 'store')->name('apartments.store');
-        Route::get('/apartments/all', 'allApartments')->name('apartments.all');;
+        Route::get('/apartments/all', 'allApartments')->name('apartments.all');
         Route::post('/apartments/{id}/mark-available', 'markAsAvailable')->name('apartments.markAvailable');
+    });
+
+    Route::controller(ChefController::class)->group(function () {
+        Route::get('/chefs', 'index')->name('chefs.index');
+        Route::get('/chefs/create', 'create')->name('chefs.create');
+        Route::post('/chefs', 'store')->name('chefs.store');
+        Route::delete('/chefs/{chef}', 'destroy')->name('chefs.destroy');
+        Route::get('/chefs/{chef}/services', 'getServices')->name('chefs.services');
+        Route::get('/chefs/book', 'book')->name('chefs.book');
+        Route::post('/chefs/book', 'storeBooking')->name('chefs.book.store');
+        Route::post('/chefs/{chef}/mark-available', 'markAsAvailable')->name('chefs.markAvailable');
+    });
+
+    Route::controller(ChefServiceController::class)->group(function () {
+        Route::get('/chef-service', 'index')->name('chef.service.index');
+        Route::post('/chef-service', 'store')->name('chef.service.store');
+        Route::post('/chef-service/assign', 'assignService')->name('chef.service.assign');
     });
 
     Route::controller(PaymentsController::class)->group(function () {

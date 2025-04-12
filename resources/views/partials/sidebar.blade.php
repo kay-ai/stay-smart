@@ -61,13 +61,13 @@
                 <div class="menu-title">Apartments</div>
             </a>
             <ul>
-                <li> <a href="#"><i class="bi bi-circle"></i>Amenities</a>
+                <li>
+                    <a href="{{route('apartments.all')}}"><i class="bi bi-circle"></i>Apartments</a>
                 </li>
                 <li>
                     <a href="{{route('apartments.create')}}"><i class="bi bi-circle"></i>Add Apartment</a>
                 </li>
-                <li>
-                    <a href="{{route('apartments.all')}}"><i class="bi bi-circle"></i>All Apartments</a>
+                <li> <a href="#"><i class="bi bi-circle"></i>Amenities</a>
                 </li>
             </ul>
         </li>
@@ -79,7 +79,9 @@
                 <div class="menu-title">Chefs</div>
             </a>
             <ul>
-                <li> <a href="#"><i class="bi bi-circle"></i>Add Chef</a>
+                <li> <a href="{{route('chefs.index')}}"><i class="bi bi-circle"></i>Chefs</a>
+                <li> <a href="{{route('chefs.create')}}"><i class="bi bi-circle"></i>Add Chef</a>
+                <li> <a href="{{route('chef.service.index')}}"><i class="bi bi-circle"></i>Services</a>
                 </li>
             </ul>
         </li>
@@ -126,7 +128,7 @@
                 </li>
             </ul>
         </li>
-        <li>
+        {{-- <li>
             <a href="#">
                 <div class="parent-icon"><i class="bi bi-file-bar-graph-fill"></i>
                 </div>
@@ -139,7 +141,7 @@
                 </div>
                 <div class="menu-title">Tickets</div>
             </a>
-        </li>
+        </li> --}}
         @endif
         <li class="{{$activePage == 'Profile' ? 'mm-active' : ''}}">
             <a href="{{route('profile.index')}}">
